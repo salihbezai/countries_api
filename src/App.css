@@ -1,0 +1,108 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg1);
+}
+
+:root {
+  --text-light: hsl(200, 15%, 8%);
+  --nav-light:hsl(0, 0%, 100%);
+  --bg1-light:hsl(0, 0%, 98%);
+  --elements-light:hsl(0, 0%, 100%);
+  --text-dark: hsl(0, 0%, 100%);
+  --nav-dark:hsl(207, 26%, 17%);
+  --bg1-dark:hsl(207, 26%, 17%);
+  --elements-dark:hsl(209, 23%, 22%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text:var(--text-dark);
+    --nav:var(--nav-dark);
+    --bg1:var(--bg1-dark);
+    --elements:var(--elements-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text:var(--text-light);
+    --nav:var(--nav-light);
+    --bg1:var(--bg1-light);
+    --elements:var(--elements-light);
+  }
+}
+
+nav {
+  background-color: var(--elements);
+  color: var(--text);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 50px;
+}
+
+nav button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.search-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.search-area input {
+  position: relative;
+  height: 40px;
+  width: 300px;
+  padding-left: 40px;
+}
+
+.search-area i {
+  position: absolute;
+  top: 70px;
+  left: 54px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+/*# sourceMappingURL=App.css.map */
